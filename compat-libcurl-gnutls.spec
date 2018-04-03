@@ -9,7 +9,7 @@ URL: https://github.com/EasyCoding/%{name}
 Summary: Libcurl-gnutls compatibility library
 License: GPLv3+
 
-BuildRequires: libcurl-devel
+BuildRequires: libcurl
 Requires: libcurl%{?_isa}
 
 %description
