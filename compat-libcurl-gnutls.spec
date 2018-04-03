@@ -24,7 +24,7 @@ applications.
 
 %install
 mkdir -p "%{buildroot}%{_libdir}"
-ln -s %{_libdir}/libcurl.so.4 "%{buildroot}%{_libdir}/%{libname}"
+ln -s %{_libdir}/libcurl.so.4.4.0 "%{buildroot}%{_libdir}/%{libname}"
 
 %ldconfig_scriptlets
 
