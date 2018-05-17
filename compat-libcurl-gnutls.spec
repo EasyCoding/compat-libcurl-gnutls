@@ -5,7 +5,7 @@
 
 Name: compat-libcurl-gnutls
 Version: 1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 
 URL: https://github.com/EasyCoding/%{name}
 Summary: Libcurl-gnutls compatibility library
@@ -38,5 +38,9 @@ ln -s %{_libdir}/libcurl.so.4 "%{buildroot}%{_libdir}/%{libname}"
 %{_libdir}/%{libname}
 
 %changelog
+* Thu May 17 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 1.0-2
+- Fixed build under Fedora 28+.
+- Resolved new issues with GitKraken.
+
 * Mon Apr 02 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 1.0-1
 - Initial release.
