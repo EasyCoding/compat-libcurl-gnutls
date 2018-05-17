@@ -24,7 +24,6 @@ Provides: %{libname}%{?_isa}
 Provides: %{libname}()%{libsuffix}
 Provides: %{libname}(CURL_GNUTLS_3)%{libsuffix}
 
-
 %description
 Provides libcurl-gnutls compatibility library for different 3rdparty
 applications.
