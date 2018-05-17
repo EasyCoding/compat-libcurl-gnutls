@@ -3,6 +3,12 @@
 %global debug_package %{nil}
 %global libname libcurl-gnutls.so.4
 
+%if 0%{?__isa_bits} == 64
+%define libsuffix (%{?__isa_bits}bit)
+%else
+%define libsuffix %{nil}
+%endif
+
 Name: compat-libcurl-gnutls
 Version: 1.0
 Release: 2%{?dist}
@@ -15,8 +21,9 @@ BuildRequires: libcurl
 Requires: libcurl%{?_isa}
 
 Provides: %{libname}%{?_isa}
-Provides: %{libname}()(%{?__isa_bits}bit)
-Provides: %{libname}(CURL_GNUTLS_3)(%{?__isa_bits}bit)
+Provides: %{libname}()%{libsuffix}
+Provides: %{libname}(CURL_GNUTLS_3)%{libsuffix}
+
 
 %description
 Provides libcurl-gnutls compatibility library for different 3rdparty
