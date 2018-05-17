@@ -14,6 +14,10 @@ License: GPLv3+
 BuildRequires: libcurl
 Requires: libcurl%{?_isa}
 
+Provides: %{libname}%{?_isa}
+Provides: %{libname}()(%{?__isa_bits}bit)
+Provides: %{libname}(CURL_GNUTLS_3)(%{?__isa_bits}bit)
+
 %description
 Provides libcurl-gnutls compatibility library for different 3rdparty
 applications.
