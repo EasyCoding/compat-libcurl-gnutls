@@ -1,3 +1,5 @@
+%undefine __brp_ldconfig
+
 %global debug_package %{nil}
 %global libname libcurl-gnutls.so.4
 
